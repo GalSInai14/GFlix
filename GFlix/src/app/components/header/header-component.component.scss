@@ -1,0 +1,47 @@
+@import "../../../assets/styles/colors.scss";
+
+:host {
+  width: 100%;
+
+  .toolbar {
+    width: 100%;
+
+    ::ng-deep mat-toolbar {
+      background-color: $gflix-background-color;
+
+      mat-toolbar-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .header-name {
+      color: $gflix-theme-color;
+      font-size: x-large;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+
+      .sign-up {
+        background-color: #31363f;
+        color: $gflix-theme-color;
+        font-size: medium;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      .sign-up:hover {
+        color: white;
+      }
+
+      .login {
+        color: $gflix-theme-color;
+        margin: 5px;
+        font-size: medium;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "keys": {
+        "tmdbKey": "bb998110bae17c8bf21025fcf9bee2ba"
+    },
+    "services": {
+        "tmdbApi":"https://api.themoviedb.org"
+    }
+}

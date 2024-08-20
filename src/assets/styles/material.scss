@@ -1,19 +1,4 @@
-@import "~@angular/material/theming";
+@use "@anular/material" as mat;
 @import "./colors.scss";
 
-@include mat-core();
-
-.mat-toolbar-row {
-  display: flex;
-  box-sizing: border-box;
-
-  padding: 0;
-  width: 100%;
-
-  flex-direction: row;
-  align-items: center;
-
-  white-space: nowrap;
-
-  background-color: $gflix-background-color;
-}
+@include mat.core();

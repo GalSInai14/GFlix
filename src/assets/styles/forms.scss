@@ -1,0 +1,26 @@
+@import "../styles/colors.scss";
+
+.form-field {
+  .field-label {
+    color: $gflix-grey-600;
+    padding-bottom: 3px;
+    font-size: medium;
+    font-weight: lighter;
+  }
+
+  &.form-field-full {
+    flex-basis: 100%;
+  }
+
+  &.form-field-three-quarters {
+    flex-basis: 75%;
+  }
+
+  &.form-field-half {
+    flex-basis: 50%;
+  }
+
+  &.form-field-quarter {
+    flex-basis: 25%;
+  }
+}

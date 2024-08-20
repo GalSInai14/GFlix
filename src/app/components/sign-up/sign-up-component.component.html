@@ -1,1 +1,63 @@
-<p>sign-up-component works!</p>
+<div class="sign-up-container" [formGroup]="signUpForm">
+  <div class="sign-up-title">Sign Up</div>
+
+  <div class="form-field form-field-half" formControlName="firstName">
+    <div class="field-label">*First Name:</div>
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        formControlName="firstName"
+        placeholder="Jhon"
+      />
+      @if(signUpForm.controls.firstName.hasError('required')){
+      <mat-error>First Name required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div class="form-field form-field-half" formControlName="lastName">
+    <div class="field-label">*Last Name:</div>
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        formControlName="lastName"
+        placeholder="Doe"
+      />
+      @if(signUpForm.controls.lastName.hasError('required')){
+      <mat-error>Email required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div class="form-field form-field-half" formControlName="email">
+    <div class="field-label">*Email:</div>
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        formControlName="email"
+        placeholder="Ex. pat@example.com"
+      />
+      @if(signUpForm.controls.email.hasError('required')){
+      <mat-error>Email required</mat-error>
+      } @else if(signUpForm.controls.email.hasError('email')){
+      <mat-error>Invalid Email</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div class="form-field form-field-half" formControlName="password">
+    <div class="field-label">*Password:</div>
+    <mat-form-field>
+      <input type="password" matInput formControlName="password" />
+      @if(signUpForm.controls.password.hasError('required')){
+      <mat-error>Password required</mat-error>
+      } @else if(signUpForm.controls.password.hasError('minlength')){
+      <mat-error>Min 8 characters</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <button mat-stroked-button>Sign Up</button>
+</div>
